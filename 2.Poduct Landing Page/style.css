@@ -1,54 +1,124 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-nav{
+
+nav {
     display: flex;
     justify-content: space-between;
     margin: 40px 66px;
 }
-nav h2{
+
+nav h2 {
     font-size: 30px;
     font-weight: bold;
 }
-nav ol li{
+
+nav ol li {
     list-style: none;
     margin: 0px 25px;
     font-size: 20px;
 }
-nav ol li:nth-child(1){
-    padding: 14px 35px ;
+
+nav ol li:nth-child(1) {
+    padding: 14px 35px;
     border-radius: 25px;
     color: black;
     /* background-color: black; */
 }
-nav ol li:nth-child(2){
-    padding: 14px 35px ;
+
+nav ol li:nth-child(2) {
+    padding: 14px 35px;
     border-radius: 25px;
     color: aliceblue;
     background-color: black;
 }
-nav ol{
+
+nav ol {
     display: flex;
-    
+
 }
+
 /* FOR BODY */
-main{
+main {
     margin: 0px 150px;
+    /* position: relative; */
 
 }
-#back_imgage{
-    opacity: 0.08;
+
+#back_imgage {
+    opacity: 0.05;
     position: absolute;
-    bottom: 250px;
-    left: 100px;
-}
-p{
-    word-spacing: break-word;
+    bottom: 98px;
+    left: 102px;
 }
 
-.heading{
+p {
+    word-spacing: break-word;
+    margin-top: 45px;
+    font-size: 20px;
+}
+.real_phone{
+    padding-top:90px;
+}
+
+.heading {
     font: 100;
     font-size: 60px;
+   
 }
+
+span {
+    height: 84vh;
+    display: flex;
+    /* border: 4px solid black; */
+
+}
+
+.hphone {
+    overflow: hidden;
+    padding-top: 126px;
+}
+
+.hphone button {
+    color: white;
+    border-style: none;
+    background-color: rgb(95, 94, 95);
+    border-radius: 14px;
+    font-size: 18px;
+    padding: 16px 16px;
+    margin-top: 45px;
+}
+
+footer {
+    background-color: rgb(52, 51, 52);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+
+.foot_head {
+    /* border: 2px solid yellow; */
+    margin: 160px 10px;
+}
+
+.foot_head h4 {
+    font-size: 30px;
+    color: rgb(55, 106, 192);
+}
+
+.foot_head li {
+    list-style: none;
+    font-size: 17px;
+    margin-top: 15px;
+}
+
+.bg img {
+    left: 533px;
+    top: 475px;
+    position: absolute;
+    opacity: 0.05;
+}
+ 
