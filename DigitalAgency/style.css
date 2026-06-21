@@ -367,7 +367,8 @@ main .reviews .cont2 .row-card .card .mini-card .prof-link {
   border-radius: 6px;
 }
 main .faqs .cont1 {
-  display: none;
+  border-left: 1px solid var(--grey-20);
+  border-right: 1px solid var(--grey-20);
   padding: 100px 250px 100px 250px;
   position: relative;
   width: 100%;
@@ -398,13 +399,14 @@ main .faqs .cont1 .sub-heading {
 }
 main .faqs .cont2 {
   display: flex;
-  flex-direction: column;
-}
-main .faqs .cont2 .col-faq {
   flex-direction: row;
 }
-main .faqs .cont2 .col-faq .faq-item {
+main .faqs .cont2 .col-faq {
+  display: flex;
+  flex-direction: column;
   width: 50%;
+}
+main .faqs .cont2 .col-faq .faq-item {
   border: 1px solid var(--grey-20);
   background: #111;
   overflow: hidden;
@@ -442,7 +444,7 @@ main .faqs .cont2 .col-faq .faq-item .faq-no {
   border-radius: 10px;
   font-size: 1.3rem;
   font-weight: 600;
-  color: var(--green-50);
+  color: var(--color-white);
   background: linear-gradient(180deg, rgb(38, 38, 38) 0%, rgba(38, 38, 38, 0.15) 100%);
 }
 main .faqs .cont2 .col-faq .faq-item .faq-title {
@@ -466,10 +468,305 @@ main .faqs .cont2 .col-faq .faq-item[open] summary::after {
   content: "×";
   color: var(--green-50);
 }
+main .faqs .cont2 .col-faq .faq-item[open] .faq-no {
+  color: var(--green-50);
+}
 main .faqs .cont2 .col-faq .faq-item[open] .faq-title {
   color: var(--green-50);
 }
 main .faqs .cont2 .col-faq .faq-item[open] .faq-content {
   max-height: 300px;
   border-top: 1px solid var(--grey-20);
+}
+main .contact .cont1 {
+  border: 1px solid var(--grey-15);
+  padding: 100px 250px;
+  position: relative;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  overflow: hidden;
+}
+main .contact .cont1 .bg-img img {
+  opacity: 0.3;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+}
+main .contact .cont1 .headers {
+  text-align: center;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+main .contact .cont1 .headers .heading {
+  font-size: 30px;
+}
+main .contact .cont1 .headers .sub-heading {
+  font-size: 16px;
+}
+main .contact .cont1 .contact-btn {
+  display: flex;
+  align-items: center;
+  padding: 12px 24px;
+  background-color: var(--green-50);
+  border-radius: 8px;
+  font-size: 14px;
+  color: var(--grey-15);
+}
+main .contact .cont2 {
+  padding: 0px 217px;
+  border: 1px solid var(--grey-20);
+}
+main .contact .cont2 form {
+  padding: 60px 60px;
+  border-left: 1px solid var(--grey-20);
+  border-right: 1px solid var(--grey-20);
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  flex-direction: column;
+}
+main .contact .cont2 form .full-detail {
+  width: 100%;
+  justify-content: space-around;
+  display: flex;
+  gap: 30px;
+}
+main .contact .cont2 form .full-detail .name {
+  border-radius: 6px;
+  border: 1px solid var(--grey-20);
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  gap: 16px;
+  width: 100%;
+}
+main .contact .cont2 form .full-detail .name input {
+  font-size: 16px;
+  background-color: rgba(76, 76, 77, 0);
+  color: var(--color-white);
+  border: none;
+  outline: none;
+  width: 100%;
+  border-bottom: 1px solid var(--grey-15);
+}
+main .contact .cont2 form .reason-contact {
+  border-radius: 6px;
+  border: 1px solid var(--grey-20);
+  width: 100%;
+  padding: 30px;
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+}
+main .contact .cont2 form .reason-contact .head {
+  font-size: 18px;
+}
+main .contact .cont2 form .reason-contact .values {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 24px;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+}
+main .contact .cont2 form .reason-contact .values .value {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
+main .contact .cont2 form .reason-contact .values .value input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 28px;
+  height: 28px;
+  border: 1px solid #2a2a2a;
+  border-radius: 6px;
+  background: linear-gradient(180deg, rgb(36, 36, 36), rgba(36, 36, 36, 0.4));
+  position: relative;
+  cursor: pointer;
+}
+main .contact .cont2 form .reason-contact .values .value input:checked::after {
+  content: "✓";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c4ff4d;
+  font-weight: bold;
+}
+main .contact .cont2 form .reason-contact .values .value span {
+  color: #d9d9d9;
+}
+main .contact .cont2 form .budget {
+  width: 100%;
+  padding: 40px;
+  border: 1px solid #262626;
+  border-radius: 12px;
+  background: var(--grey-10);
+}
+main .contact .cont2 form .budget h3 {
+  margin-bottom: 12px;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--color-white);
+}
+main .contact .cont2 form .budget p {
+  margin-bottom: 60px;
+  color: var(--grey-90);
+  font-size: 16px;
+}
+main .contact .cont2 form .budget .slider-wrapper {
+  width: 100%;
+}
+main .contact .cont2 form .budget input[type=range] {
+  width: 100%;
+  height: 4px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 100px;
+  cursor: pointer;
+  background: #2a2a2a;
+}
+main .contact .cont2 form .budget input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--green-50);
+  border: 4px solid var(--grey-10);
+  box-shadow: 0 0 0 4px rgba(158, 255, 0, 0.15);
+}
+main .contact .cont2 form .budget input[type=range]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 50%;
+  background: var(--green-50);
+}
+main .contact .cont2 form .budget .price-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 14px;
+}
+main .contact .cont2 form .budget .price-labels span {
+  color: var(--color-white);
+  font-size: 18px;
+  font-weight: 500;
+}
+main .contact .cont2 form .msg {
+  width: 100%;
+  padding: 20px 30px;
+  border: 1px solid var(--grey-15);
+  border-radius: 6px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+main .contact .cont2 form .msg .head {
+  font-size: 18px;
+}
+main .contact .cont2 form .msg input {
+  outline: none;
+  border: none;
+  background-color: var(--grey-10);
+  color: var(--color-white);
+  width: 100%;
+  border-bottom: 1px solid var(--grey-15);
+  font-family: 16px;
+}
+main .contact .cont2 form .submit-btn {
+  display: flex;
+  align-items: center;
+  padding: 12px 24px;
+  background-color: var(--green-50);
+  border-radius: 8px;
+  font-size: 14px;
+  color: var(--grey-15);
+}
+
+footer {
+  padding: 40px 80px;
+  border-top: 1px solid var(--grey-15);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+footer .cont1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-white);
+}
+footer .cont1 .logo {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+footer .cont1 .logo .logo-text {
+  font-size: 30px;
+}
+footer .cont1 .nav-items {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+footer .cont1 .nav-items a {
+  padding: 12px 22px;
+  border-radius: 6px;
+  font-size: 14px;
+  color: var(--grey-90);
+  text-decoration: none;
+}
+footer .cont1 .social-handles {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1px solid var(--grey-15);
+  font-size: 16px;
+  color: var(--color-white);
+  gap: 30px;
+}
+footer .cont1 .social-handles .logos {
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+}
+footer .cont1 .nav-items a:hover {
+  background-color: var(--grey-15);
+}
+footer .line {
+  width: 100%;
+  height: 1px;
+  background-color: var(--grey-15);
+}
+footer .cont2 {
+  color: var(--color-white);
+  display: flex;
+  justify-content: space-between;
+}
+footer .cont2 .address {
+  display: flex;
+  gap: 10px;
+  align-self: center;
+}
+footer .cont2 .address .add {
+  display: flex;
+  gap: 5px;
+  align-self: center;
+  font-size: 16px;
 }/*# sourceMappingURL=style.css.map */
