@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --color-white: #ffffff;
   --color-black: #000000;
@@ -365,11 +366,8 @@ main .reviews .cont2 .row-card .card .mini-card .prof-link {
   text-align: center;
   border-radius: 6px;
 }
-main .faqs {
-  border-left: 1px solid var(--grey-20);
-  border-right: 1px solid var(--grey-20);
-}
 main .faqs .cont1 {
+  display: none;
   padding: 100px 250px 100px 250px;
   position: relative;
   width: 100%;
@@ -398,8 +396,80 @@ main .faqs .cont1 .sub-heading {
   font-size: 18px;
   z-index: 1;
 }
-main .faqs .cont2 details {
-  padding: 24px 40px;
+main .faqs .cont2 {
+  display: flex;
+  flex-direction: column;
+}
+main .faqs .cont2 .col-faq {
+  flex-direction: row;
+}
+main .faqs .cont2 .col-faq .faq-item {
+  width: 50%;
   border: 1px solid var(--grey-20);
-  border-radius: 6px;
+  background: #111;
+  overflow: hidden;
+}
+main .faqs .cont2 .col-faq .faq-item:not(:last-child) {
+  border-bottom: 0;
+}
+main .faqs .cont2 .col-faq .faq-item summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 28px 40px;
+  cursor: pointer;
+  position: relative;
+}
+main .faqs .cont2 .col-faq .faq-item summary::-webkit-details-marker {
+  display: none;
+}
+main .faqs .cont2 .col-faq .faq-item summary::after {
+  content: "+";
+  position: absolute;
+  right: 40px;
+  font-size: 2rem;
+  color: #fff;
+  transition: 0.3s ease;
+}
+main .faqs .cont2 .col-faq .faq-item .faq-no {
+  width: 58px;
+  height: 58px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--green-50);
+  background: linear-gradient(180deg, rgb(38, 38, 38) 0%, rgba(38, 38, 38, 0.15) 100%);
+}
+main .faqs .cont2 .col-faq .faq-item .faq-title {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+main .faqs .cont2 .col-faq .faq-item .faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+main .faqs .cont2 .col-faq .faq-item .faq-content p {
+  margin: 0;
+  padding: 24px 40px 30px 122px;
+  color: #b3b3b3;
+  line-height: 1.8;
+}
+main .faqs .cont2 .col-faq .faq-item[open] summary::after {
+  content: "×";
+  color: var(--green-50);
+}
+main .faqs .cont2 .col-faq .faq-item[open] .faq-title {
+  color: var(--green-50);
+}
+main .faqs .cont2 .col-faq .faq-item[open] .faq-content {
+  max-height: 300px;
+  border-top: 1px solid var(--grey-20);
 }/*# sourceMappingURL=style.css.map */
